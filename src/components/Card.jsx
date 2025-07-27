@@ -1,5 +1,5 @@
-import React from 'react'
-import SpotlightCard from './SpotLightCard'
+
+import SpotlightCard from './SpotlightCard'
 
 const Card = ({post}) => {
   return (
