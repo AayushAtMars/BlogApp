@@ -1,11 +1,11 @@
-
-import SpotlightCard from './SpotlightCard'
+import React from 'react';
+import SpotlightCard from './SpotlightCard.jsx'; // Added .jsx extension
 
 const Card = ({post}) => {
   return (
-    <div className="max-w-md mx-auto h-full"> {/* Added h-full */}
+    <div className="max-w-md mx-auto h-full">
       <SpotlightCard 
-        className="glass-card text-white p-8 rounded-2xl hover:scale-105 transition-transform duration-300 h-full flex flex-col" // Added h-full and flex flex-col
+        className="glass-card text-white p-8 rounded-2xl hover:scale-105 transition-transform duration-300 h-full flex flex-col"
         spotlightColor="rgba(255, 255, 255, 0.1)"
       >
         {/* Category Badge */}
@@ -16,12 +16,12 @@ const Card = ({post}) => {
         </div>
 
         {/* Title */}
-        <h2 className="text-xl font-bold mb-3 gradient-text h-14 flex items-start"> {/* Fixed height for title */}
+        <h2 className="text-xl font-bold mb-3 gradient-text h-14 flex items-start">
           <span className="line-clamp-2">{post.title}</span>
         </h2>
 
         {/* Content Preview */}
-        <p className="text-gray-200 mb-4 text-sm leading-relaxed h-16 overflow-hidden"> {/* Fixed height */}
+        <p className="text-gray-200 mb-4 text-sm leading-relaxed h-16 overflow-hidden">
           <span className="line-clamp-3">{post.content}</span>
         </p>
 
@@ -32,7 +32,7 @@ const Card = ({post}) => {
         </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-1 mb-4 h-12 overflow-hidden"> {/* Fixed height for tags */}
+        <div className="flex flex-wrap gap-1 mb-4 h-12 overflow-hidden">
           {post.tags.slice(0, 3).map((tag, index) => (
             <span 
               key={index}
@@ -50,7 +50,7 @@ const Card = ({post}) => {
         <div className="flex-grow"></div>
 
         {/* Read More Link */}
-        <div className="border-t border-white/10 pt-4 mt-auto"> {/* Added mt-auto */}
+        <div className="border-t border-white/10 pt-4 mt-auto">
           <a href="#" className="text-blue-300 hover:text-blue-200 text-sm font-medium">
             Read full article →
           </a>
@@ -60,4 +60,4 @@ const Card = ({post}) => {
   )
 }
 
-export default Card
+export default Card;
