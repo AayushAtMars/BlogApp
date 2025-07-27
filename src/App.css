@@ -1,0 +1,42 @@
+/* Only hide cursor when blob cursor is active */
+body {
+  cursor: auto; /* Keep default cursor */
+}
+
+/* Hide cursor only on the main content area, not on interactive elements */
+.hide-cursor {
+  /* cursor: none; */
+}
+
+/* Ensure interactive elements still show cursor */
+button, a, input, textarea, select, [role="button"] {
+  cursor: pointer !important;
+}
+
+/* Show text cursor on text inputs */
+input, textarea {
+  cursor: text !important;
+}
+
+
+/* Add these keyframe animations to your CSS file */
+@keyframes star-movement-bottom {
+  0% { 
+    transform: translate(0%, 0%); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translate(-100%, 0%); 
+    opacity: 0; 
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
